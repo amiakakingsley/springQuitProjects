@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: springQuitProjects
+    
+    
+  datasource:
+     url:  jdbc:mysql://localhost:3306/questions
+     username: root
+     password: 63428185
+     
+  jpa:
+    hibernate:
+      ddl-auto: update
+  

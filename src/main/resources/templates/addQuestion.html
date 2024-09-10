@@ -1,0 +1,98 @@
+<!Doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Add Question</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+    crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container"
+		style="max-width: 50%; margin: 0 auto; height: 100%; background-color: whitesmoke; color: darkblue;">
+		<div class="container " style="max-width: 80%; text-align: left;">
+			<h2 class="container text-center">Add New Question</h2>
+			<div class="btn-group btn-group-justified">
+				<a th:href="@{/}" class="btn btn-primary">Home</a>
+				<a th:href="@{/}" class="btn btn-primary">Feedback</a>
+				<a th:href="@{/}" class="btn btn-primary">Contact Us</a>
+
+			</div>
+		</div>
+		<P>
+
+		</P>
+		<form th:action="@{/addQuestions}" method="post" 
+		         style="max-width: 80%; margin: 0 auto; height: 90%;">
+			<div class="mb-3">
+				<input type="text" class="form-control form-control-lg" id="amount" placeholder="Question" name="question"
+					required>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="mb-3">
+						<input type="text" class="form-control " id="amount" placeholder="Option A." name="option1"
+							required>
+					</div>
+				</div>
+				<div class="col">
+					<div class="mb-3">
+						<input type="text" class="form-control " id="amount" placeholder="Option B" name="option2"
+							required>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="mb-3">
+						<input type="text" class="form-control" id="amount" placeholder="Option C" name="option3"
+							required>
+					</div>
+				</div>
+				<div class="col">
+					<div class="mb-3">
+						<input type="text" class="form-control " id="amount" placeholder="Option D" name="option4"
+							required>
+					</div>
+				</div>
+
+			</div>
+			<h5 class="container text-warning">Make sure the currect Answers corresponds</h5>
+			<div class="mb-3">
+				<input type="text" class="form-control form-control-lg" id="rightAnswer" placeholder="Right Answer"
+					name="rightAnswer" required>
+			</div>
+
+			<div class="mb-4">
+				<h4>
+					<lebel>Category</lebel>
+				</h4>
+				<p>
+				<div class="mb-4">
+					<label for="java" class="radio-inline"><input type="radio" th:value="Java" id="java" name="category"
+							required>Java</label>
+					<label for="Python" class="radio-inline"><input type="radio" th:value="Python" id="Python" name="category"
+							required>Python</label>
+					<label for="kotlin" class="radio-inline"><input type="radio" th:value="Kotlin" id="kotlin" name="category"
+							required>Kotlin</label>
+
+					
+				</div>
+				</p>
+			</div>
+			<div class="m-6">
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</form>
+
+	</div>
+
+
+
+</body>
+
+</html>
